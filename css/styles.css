@@ -2,6 +2,7 @@
   --background-color-haeder:rgba(255, 255, 255, 1);
   --second-brand-color:rgba(47, 48, 58, 1);
   --list-font-color:rgba(117, 117, 117, 1);
+  --overlay-color:rgba(255, 255, 255, 1);
 }
 * {
   box-sizing: border-box;
@@ -50,6 +51,7 @@ header {
 .link {
   color: rgba(33, 33, 33, 1);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link:active,
 .link:hover,
@@ -59,11 +61,15 @@ header {
 .contacts-link {
   color: var(--list-font-color);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contacts-link:active,
 .contacts-link:hover,
 .contacts-link:focus {
   color: rgba(33, 150, 243, 1);
+}
+a svg{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 a:hover svg {
   fill:rgba(33, 150, 243, 1);
@@ -93,6 +99,7 @@ h1 {
 .button {
   font-family: inherit;
   background-color: rgba(33, 150, 243, 1);
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
   color: rgba(255, 255, 255, 1);
   font-weight: 700;
   font-size: 16px;
@@ -107,6 +114,7 @@ h1 {
   border-style:none;
   border-radius: 4px;
   margin-bottom:200px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button:active,
@@ -187,6 +195,7 @@ ul {
   padding:6px 22px 6px 22px;
   border-style: none;
   border-radius:4px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-portfolio:active,
 .button-portfolio:focus,
@@ -421,6 +430,9 @@ margin-left: 93px;
   margin-right: 10px;
   cursor: pointer;
  }
+ .client-icon{
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ }
  .client-icon:hover,
  .client-icon:focus,
  .client-icon:active {
@@ -456,6 +468,7 @@ margin-left: 93px;
   background-color: rgba(255, 255, 255, 0.1);
   fill:rgba(255, 255, 255, 1);
   cursor:pointer;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-icons:active,
 .footer-icons:hover,
@@ -477,6 +490,7 @@ fill:rgba(175, 177, 184, 1);
 background-color:white;
 border-radius: 50%;
 cursor: pointer;
+transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .individual-links:active,
 .individual-links:hover,
@@ -490,4 +504,44 @@ cursor: pointer;
     align-items: center;
     justify-content:space-evenly;
     column-gap:10px;
-  } 
+  }
+  .item:active,
+  .item:hover,
+  .item,focus {
+    box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0 4px 4px 0 rgba(0, 0, 0, 0.06);
+  }
+  .item{
+    cursor:pointer;
+    box-shadow: none;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+.block-image-portfolio{
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay-portfolio{
+position: absolute;
+top:0;
+left:0;
+/* margin-top: 0.5px; */
+height: 100%;
+width: 100%;
+padding-top:49px;
+padding-left: 24px;
+padding-right: 45px;
+padding-bottom: 49px;
+background-color: rgba(33, 150, 243, 0.9);
+}
+.overlay-portfolio > p {
+  color: var(--overlay-color);
+  font-size: 18px;
+  line-height: 1.55;
+}
+.item:hover .overlay-portfolio{
+transform: translatey(0);
+}
+.overlay-portfolio{
+  transform:translateY(101%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
