@@ -32,7 +32,7 @@ header {
   font-size: 26px;
   line-height: 1.17;
   text-decoration: none;
-  /* cursor: default; */
+  cursor: none;
 }
 .logo{
   margin:auto;
@@ -52,11 +52,36 @@ header {
   color: rgba(33, 33, 33, 1);
   text-decoration: none;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  position:relative;
 }
 .link:active,
 .link:hover,
 .link:focus {
   color: rgba(33, 150, 243, 1);
+}
+
+
+.link1:hover::after, 
+.link1:link::after{
+  position:absolute;
+  content:"";
+  width: 58px;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  top:44px;
+  left:0;
+}
+.link2:hover::after, 
+.link2:link::after{
+  position:absolute;
+  content:"";
+  width: 58px;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+  top:44px;
+  left:0;
 }
 .contacts-link {
   color: var(--list-font-color);
@@ -544,4 +569,7 @@ transform: translatey(0);
 .overlay-portfolio{
   transform:translateY(101%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.image-explanation-section2{
+  
 }
