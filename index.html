@@ -48,7 +48,9 @@
       <section class="first-section section" >
         <div class="first-section container">
           <div><h1 class="header-main">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1></div>
-          <div class="button-container"><button class="button" type="button">Zamów usługę</button></div>
+            <div class="button-container">
+              <button class="button modal-btn" type="button" data-modal-open>Zamów usługę</button>
+          </div>
         </div>
       </section>
       <section class="second-section">
@@ -385,5 +387,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="close-btn" type="button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="/js/modal.js"></script>
   </body>
 </html>
