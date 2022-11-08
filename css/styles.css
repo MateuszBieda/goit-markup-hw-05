@@ -454,8 +454,10 @@ margin-left: 93px;
   display: inline-block;
   margin-right: 10px;
   cursor: pointer;
+  fill:rgba(117, 117, 117, 1);
  }
  .client-icon{
+  fill:rgba(175, 177, 184, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
  }
  .client-icon:hover,
