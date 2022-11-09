@@ -632,3 +632,40 @@ transform: translatey(0);
   border:solid rgba(0, 0, 0, 0.1) 1px;
   border-radius: 50%;
 }
+@keyframes modal-effects{
+  0% {
+    scale: 1;
+    transform:skew(0); 
+    opacity:1;
+  }
+  25%{
+    scale: 0.75;
+    transform:skew(15deg,15deg); 
+    opacity:0.75;
+
+  }
+  50%{
+    scale: 0.5;
+    transform:skew(20deg,20deg);
+    opacity:0.5;
+  }
+  75%{
+    scale: 0.75;
+    transform:skew(7deg,7deg); 
+    opacity:0.75;
+  }
+  100%{
+    scale:1;
+    transform:skew(0);
+    opacity:1;
+  }
+}
+
+.backdrop:hover{
+  animation-name: modal-effects;
+  animation-play-state: running;
+  animation-duration: 1500ms;
+  animation-timing-function:linear;
+  animation-delay: 0;
+  animation-fill-mode:forwards;
+}
